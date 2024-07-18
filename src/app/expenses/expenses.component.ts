@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { TransactionService } from '../services/transaction.service';
 import { Transaction } from '../models/transaction.model';
 import { CommonModule } from '@angular/common';
@@ -14,6 +14,7 @@ import { BudgetService } from '../services/budget.service';
 export class ExpensesComponent {
   constructor(private transactionService: TransactionService, private budgetService: BudgetService){}
   @Input() expenses: Transaction[];
+  @Input() incomesAmount: number;
   deleteTransaction(id:string){
     let newTransaction: Transaction[];
     let transaction: Transaction;
@@ -32,6 +33,15 @@ export class ExpensesComponent {
 
     // guardo los cambios en mi array
     this.transactionService.saveTransaction(newTransaction);
+    }
+
+    Porcentage(incomes: number, expenses: number): string {
+      if (incomes === 0 || expenses === 0) {
+        return "0%";
+      } else {
+        const percentage: number = ((expenses / incomes) * 100) * -1;
+        return percentage.toFixed(2) + "%";
+      }
     }
   
 }
