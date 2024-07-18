@@ -13,7 +13,10 @@ import { BudgetService } from '../services/budget.service';
 })
 export class ExpensesComponent {
   constructor(private transactionService: TransactionService, private budgetService: BudgetService){}
+  
   @Input() expenses: Transaction[];
+  @Input() incomesAmount: number;
+
   deleteTransaction(id:string){
     let newTransaction: Transaction[];
     let transaction: Transaction;
