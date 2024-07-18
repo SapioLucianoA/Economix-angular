@@ -1,0 +1,103 @@
+.div-principal{
+  background-color:  rgba(0, 18, 73, 1);
+  }
+.formulary{
+  margin-top: 2rem;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formulary .input-box {
+  position: relative;
+  width: 100%;
+  height: 3.125rem;
+  margin: 1.25rem 0rem;
+}
+
+.input-box input {
+  color: rgba(242, 204, 195, 1);
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: 0.2rem rgba(242, 204, 195, 1) solid;
+  transition: .5s;
+  font-weight: 500;
+  padding-right: 40px;
+  padding-left: 30px;
+}
+
+.input-box input:focus,
+.input-box input:valid{
+  border-bottom:  0.2rem rgba(242, 204, 195, 1) solid;
+}
+
+
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-95%);
+  pointer-events: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  top: 0;
+  color: rgba(242, 204, 195, 1);
+  font-size: large;
+
+}
+
+.input-box svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: rgba(242, 204, 195, 1);
+  margin-left: 0.4rem;
+}
+
+.input-box input:focus~svg,
+.input-box input:valid~svg{
+  color: rgba(242, 204, 195, 1);
+}
+
+/* button */
+.button {
+  color: rgba(242, 204, 195, 1);
+  position: relative;
+  width: 150px;
+  height: 45px;
+  background: transparent;
+  border: 2px solid rgba(242, 204, 195, 1);
+  outline: none;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
+.button:hover{
+  background: linear-gradient(45deg, rgba(242, 204, 195, 1), rgb(125, 97, 91), rgba(242, 204, 195, 1));
+  color: white;
+}
+.button:active{
+  background: rgba(241, 222, 222, 1);
+  color: black;}
+
+  @media screen and (min-width: 720px) {
+    .formulary{
+      flex-direction: row;
+    }
+  }
+  

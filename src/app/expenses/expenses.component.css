@@ -1,0 +1,85 @@
+.contenedor-table{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+table.purpleHorizon {
+  margin-top: 2rem;
+  border: 4px solid  rgb(244, 41, 119);
+  background-color: rgba(0, 18, 73, 1);
+  width: 90%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.purpleHorizon td, table.purpleHorizon th {
+  border: 1px solid rgb(244, 41, 119);
+  padding: 5px 2px;
+  text-align: center;
+}
+table.purpleHorizon tbody td {
+  font-size: 13px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+table.purpleHorizon tr:nth-child(even) {
+  background:  rgba(207, 18, 89, 1);
+}
+table.purpleHorizon thead {
+  background:  rgba(207, 18, 89, 1);
+  border-bottom: 4px solid  rgb(244, 41, 119);
+}
+table.purpleHorizon thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+  text-align: center;
+}
+table.purpleHorizon thead th:first-child {
+  border-left: none;
+}
+
+table.purpleHorizon tfoot td {
+  font-size: 13px;
+}
+table.purpleHorizon tfoot .links {
+  text-align: right;
+}
+table.purpleHorizon tfoot .links a{
+  display: inline-block;
+  background:  rgba(207, 18, 89, 1);
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+table.purpleHorizon svg{
+  width: 18px;
+  cursor: pointer;
+}
+table.purpleHorizon svg:hover{
+  filter: drop-shadow( 2px 2px red);
+  color: black;
+}
+table.purpleHorizon svg:active{
+  color: #FFFFFF;
+  filter: drop-shadow(2px 2px  black);
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .contenedor-table{
+    width: 400px;
+  }
+
+}
+@media screen and (min-width: 1201px) and (max-width: 1300px){
+  .contenedor-table{
+    width: 600px;
+  }
+
+}
+@media screen and (min-width: 1301px) {
+  .contenedor-table{
+    width: 600px;
+  }
+}

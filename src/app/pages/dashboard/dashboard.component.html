@@ -1,0 +1,20 @@
+<app-header
+[budget]="getBudget()"
+[budgetMonths]="getbudgetMonths()"
+[expensesAmount]="getExpensesAmount()"
+[incomesAmount]="getIncomesAmount()" 
+
+></app-header>
+<app-formulary></app-formulary>
+<div class="div-incomes-expenses w-100">
+
+  <app-incomes
+  [incomes]="getAllIncomes()"
+  ></app-incomes>
+
+
+  <app-expenses
+  [expenses]="getAllExpenses()"
+  ></app-expenses>
+  
+</div>

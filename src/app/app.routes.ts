@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 export const routes: Routes = [
+
   {
-    path:"home", component:AppComponent,
+    path:"dashboard", component:DashboardComponent,
   },
   {
-    path:"**", pathMatch:"full", redirectTo:"home" 
+    path:"**", pathMatch:"full", redirectTo:"dashboard" 
   },
 
 ];

@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+asdasd {
+  color: rgba(0, 18, 73, 1);
+  color: rgba(23, 190, 187, 1);
+  color: rgba(242, 204, 195, 1);
+  color: rgba(207, 18, 89, 1);
+  color: rgba(156, 94, 147, 1);
+  color: #008000;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgba(0, 18, 73, 1);
+}
+
+body {
+  background-color: rgba(0, 18, 73, 1);
+}

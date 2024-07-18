@@ -1,1 +1,22 @@
-<p>header works!</p>
+<div class="d-flex align-items-center justify-content-center flex-column div-principal">
+  <div class="div-budgets">
+  <div class="budget-div mt-3" [class.red]="budget < 0" [class.green]="budget >= 0" >
+    <h2 class="text-center">Total Budget</h2>
+    <p class="text-center">{{ budget | currency: 'USD' : '$' : '1.2-2' }}</p>
+  </div>
+  <div class="budget-div mt-3" [class.red]="budget < 0" [class.green]="budget >= 0" >
+    <h2 class="text-center">Month Budget</h2>
+    <p class="text-center">{{ budgetMonths | currency: 'USD' : '$' : '1.2-2' }}</p>
+  </div>
+</div>
+<div class="incomes-expenses-div">
+  <div class="budget-div green">
+    <h2 class="text-center">Incomes</h2>
+    <p class="text-center">{{ incomesAmount | currency: 'USD' : '$' : '1.2-2' }}</p>
+  </div>
+  <div class="budget-div red">
+    <h2 class="text-center">Expenses</h2>
+    <p class="text-center">{{ expensesAmount | currency: 'USD' : '$' : '1.2-2' }}<span>{{Porcentage(incomesAmount,expensesAmount)}}</span></p>
+  </div>
+</div>
+</div>
