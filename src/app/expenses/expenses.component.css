@@ -66,6 +66,31 @@ table.purpleHorizon svg:active{
   filter: drop-shadow(2px 2px  black);
 }
 
+.budget-div{
+  position: relative;
+}
+
+.budget-div .porcentage {
+  font-size: small;
+  color: rgb(235, 85, 115);
+  background-color: rgba(31, 30, 30, 0.893);
+  position: absolute;
+  padding-top: 7px;
+  border-radius: 50%;
+  top:0;
+  filter: blur(0);
+  opacity: 0; 
+  transition: 1s; 
+}
+
+.budget-div:hover .porcentage {
+  transform: translateX(0.5rem);
+  filter: blur(1);
+  opacity: 1; 
+}
+
+
+
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .contenedor-table{
     width: 400px;

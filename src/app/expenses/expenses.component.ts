@@ -36,5 +36,13 @@ export class ExpensesComponent {
     // guardo los cambios en mi array
     this.transactionService.saveTransaction(newTransaction);
     }
+    Porcentage(incomes: number, expenses: number): string {
+      if (incomes === 0 || expenses === 0) {
+        return "0%";
+      } else {
+        const percentage: number = ((expenses / incomes) * 100) * -1;
+        return percentage.toFixed(2) + "%";
+      }
+    }
   
 }
